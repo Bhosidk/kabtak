@@ -9,6 +9,10 @@ mongoose.connect(mongoURL, {
     // useUnifiedTopology: true,
 });
 
+// mongoose.createConnection(mongoURL, {
+//     // useNewUrlParser: true,
+//     // useUnifiedTopology: true,
+// });
 const db = mongoose.connection;
 
 db.on('connected', ()=>{
@@ -24,5 +28,3 @@ db.on('disconnected', ()=>{
 })
 
 module.exports = db;
-
-
